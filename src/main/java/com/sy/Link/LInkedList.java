@@ -19,7 +19,7 @@ public class LInkedList<E> {
         public String toString(){
             return e.toString();
         }
-    }
+}
     private  Node dummyHead;
     private int size;
 
@@ -72,11 +72,13 @@ public class LInkedList<E> {
     //在链表中不常用
 
     public  E get(int index){
-        if (index < 0|| index > size)
+        if (index < 0|| index > size) {
             throw new IllegalArgumentException("Get failed.ILLegal index.");
+        }
         Node cur=dummyHead.next;
-        for (int i=0;i<index;i++)
+        for (int i=0;i<index;i++) {
             cur=cur.next;
+        }
         return  cur.e;
 
     }
