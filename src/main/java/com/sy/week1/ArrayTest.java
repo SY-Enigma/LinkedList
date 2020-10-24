@@ -19,7 +19,6 @@ public class ArrayTest {
             a[i] = random.nextInt(100);
             System.out.println(a[i] + "   ");
         }
-
         int max = a[0];
         int min = a[0];
         int sum = 0;

@@ -5,7 +5,9 @@ public class LInkedList<E> {
         public  E e;
         public Node next;
         public  Node(E e,Node next){
-            this.e=e;    //用户的e传给节点
+            //用户的e传给节点
+
+            this.e=e;
             this.next=next;
         }
 
@@ -28,10 +30,13 @@ public class LInkedList<E> {
         size=0;
     }
     //获取链表中元素个数
+
     public  int  getSize(){
         return  size;
     }
+
     //返回链表是否为空
+
     public  boolean isEmpty(){
         return  size==0;
     }
@@ -39,15 +44,18 @@ public class LInkedList<E> {
 
     //在链表index（0-based  ）位置添加新的元素e
     //在链表中不常用
+
     public  void  add(int index,E e){
-        if (index < 0|| index > size)
+        if (index < 0|| index > size) {
             throw new IllegalArgumentException("Add failed.ILLegal index.");
+        }
 //        if (index==0)
 //            addFirst(e);
 //        else{
             Node prev =dummyHead;
-            for (int i=0;i<index;i++ )
+            for (int i=0;i<index;i++ ) {
                 prev=prev.next;
+            }
 //                Node node=new Node(e);
 //                node.next=prev.next;
 //                prev.next=node;
@@ -57,6 +65,7 @@ public class LInkedList<E> {
 //        }
     }
     //在链表末尾添加元素
+
     public void addLast(E e){
        add(size,e);
     }
@@ -88,4 +97,17 @@ public class LInkedList<E> {
     public  E getList(){
         return  get(size-1);
     }
+    //修改链表index（0-based  ）位置添加新的元素e
+
+//    public void  set(int  index, E e ){
+//
+//        if (index < 0|| index > size) {
+//            throw new IllegalArgumentException("Set failed.ILLegal index.");
+//            Node cur = dummyHead.next;
+//            for (int i = 0; i< index; i++){
+//                cur = cur.next;
+//                cur.e = e;
+//            }
+//        }
+//    }
 }
