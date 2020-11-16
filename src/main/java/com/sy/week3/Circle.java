@@ -1,5 +1,8 @@
 package com.sy.week3;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * @ClassName Circle
  * @Description TODO
@@ -7,7 +10,8 @@ package com.sy.week3;
  * @Date 2020/10/19
  **/
 
-
+@Getter
+@Setter
 public class Circle extends Point {
     private  int r;
 
